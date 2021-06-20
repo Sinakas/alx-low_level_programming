@@ -1,24 +1,28 @@
-nclude <stdio.h>
-
+#include <stdio.h>
 /**
-* main - Print all possible combinations of single digit numbers
-*
-* Return: Always 0 (Success)
-*/
+ * main - main block
+ * Description: Print all possible combinations fo single-digit numbers.
+ * Numbers must be separated by commas and a space.
+ * You can only use `putchar` to print to console
+ * You can only use `putchar` up to four times.
+ * You are not allowed to use any variable of type `char`.
+ * Return: 0
+ */
 int main(void)
 {
-		int number;
+	int i = 0;
 
-		for (number = 0; number <= 9; number++)
+	while (i < 10)
+	{
+		putchar(i + '0');
+		if (i < 9)
 		{
-		putchar(number + '0');
-		if (number < 9)
-		{
-		putchar(',');
-		putchar(' ');
+			putchar(44);
+			putchar(32);
 		}
-		}
-		putchar('\n');
+		i++;
+	}
+	putchar('\n');
 
 	return (0);
 }
